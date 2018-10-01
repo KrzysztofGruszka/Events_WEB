@@ -1,0 +1,114 @@
+.Animation{
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:40px;
+    font-size:1 em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    margin-top: 30px;
+  }
+  .Animation:hover{
+    background:#fff;
+    color:#1AAB8A;
+  }
+  .Animation:before,Animation:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  .Animation:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .Animation:hover:before,Animation:hover:after{
+    width:100%;
+    transition:2000ms ease all;
+  }
+  
+.HelloDiv {
+    background: rgba(0,0,0,.6);
+    width: 370px;
+    height: 80px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.HelloWord {
+    color: white;
+}
+
+.MainDiv {
+    background: rgba(0,0,0,.6);
+    margin-left: 500px;
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    margin-top: -450px;
+}
+
+.LogOutDiv {
+  background: rgba(0,0,0,.6);
+  width: 150px;
+  height: 60px;
+  margin-left: 1200px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.LogOutButton {
+  margin-top: 10px;
+  display: inline-flex;
+}
+
+.hr {
+  border-color: white;
+}
+
+.DataDiv {
+  text-align: left;
+}
+
+.DataWord {
+  margin-left: 20px;
+}
+
+.EditButton {
+  display: inline-flex;
+}
+
+.MenuDiv {
+  background: rgba(0,0,0,.6);
+  width: 200px;
+  height: 400px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 100px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.MenuButton {
+  width: 160px;
+  height: 175px;
+  margin: 0px;
+}
+
+.MoveDown{
+  margin-top: 10px;
+}

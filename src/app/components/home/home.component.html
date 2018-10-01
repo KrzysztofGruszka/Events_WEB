@@ -1,0 +1,37 @@
+<div>
+  <div class="HelloDiv">
+      <h1 class="HelloWord">Cześć {{ (userItem | async )?.firstName }}!</h1>
+      <button class="Animation ProfileButton" routerLink="/profile">Mój Profil&nbsp;<mat-icon class="Icon">accessibility</mat-icon></button>
+  </div>
+
+  <div class="TitleDiv">
+      <h2 class="TitleWord">Scrapbook of Events</h2>
+  </div>
+
+  <div class="row">
+      <div class="MainDiv">
+          <h3>Witamy w aplikacji <br> "Scrapbook of Events"!</h3>
+          <hr class="hr">
+
+          Poznaj nowych ludzi i sprawdz co się dzieje w twoim mieście!
+
+      <!--
+      <ul>
+          <li *ngFor="let user of users">
+              {{user.username}} ({{user.firstName}} {{user.lastName}})
+              - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+          </li>
+      </ul>
+      -->
+
+          <hr class="hr">
+          <a [routerLink]="['/events']"><button class="Animation MenuButtons">Wydarzenia<br><mat-icon>location_city</mat-icon></button></a>
+          <a [routerLink]="['/people']"><button class="Animation MenuButtons">Ludzie<br><mat-icon>people</mat-icon></button></a>
+      </div>
+  </div>
+
+  <div class="LogOutDiv">
+      <button class="Animation LogOurButton" routerLink="/signin">Wyloguj&nbsp;<mat-icon class="Icon">logout</mat-icon></button>
+  </div>
+
+</div>

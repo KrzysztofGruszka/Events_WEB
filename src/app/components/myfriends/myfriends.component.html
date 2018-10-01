@@ -1,0 +1,65 @@
+<!--
+<div>
+    <br>
+    <mat-card class="MatCard">
+      <h1 style="text-align:center">Zarejestrowani użytkownicy</h1>
+      <hr class="hr">
+      <div class="PopUpMessage">{{ msg }}</div>
+      <hr class="hr">
+      <tr *ngFor="let friend of myfriendList">
+          <td>{{friend.UserFriend}}</td>
+          <td>{{friend.UserFName}}</td>
+          <td>{{friend.UserFLName}}</td>
+          <td>{{friend.UserFEmail}}</td>
+          <td class="mat-column-right">
+            <button class="Animation DetailButtons" (click)="removeMyfriend(friend.$key)">Usuń ze znajomych&nbsp;<mat-icon class="Icon">clear</mat-icon></button>
+          </td> 
+      </tr>
+    </mat-card>
+  
+    <div class="LogOutDiv">
+      <button class="Animation LogOutButton" routerLink="/home">Wróć&nbsp;<mat-icon class="Icon">keyboard_tab</mat-icon></button>&nbsp;
+    </div>
+  
+  </div>
+-->
+
+<div>
+    <br>
+    <mat-card class="MatCard">
+      <h1 style="text-align:center">Moi Znajomi</h1>
+      <hr class="hr">
+      <div class="PopUpMessage">{{ msg }}</div>
+      <hr class="hr">
+      <div *ngFor="let friend of myfriendList" style="display: inline-block" class="PeopleDiv">
+        <div>
+          <div class="NameDiv">
+            <b style="margin-right: 10px;">Imię i Nazwisko:</b> 
+            {{friend.UserFName}}
+            {{friend.UserFLName}}
+          </div>
+          <hr class="hr">
+          <div class="DataButtonDiv">
+            <div class="DataDiv">
+              <div>
+                <b style="margin-right: 15px;">Pseudonim:</b>
+                {{friend.UserFriend}}
+              </div>
+              <div>
+                <b style="margin-right: 4px;">Adres E-mail:</b>
+                {{friend.UserFEmail}}
+              </div>
+            </div>
+            <div class="ButtonDiv">
+                <button class="Animation DetailButtons" (click)="removeMyfriend(friend.$key)">Usuń ze znajomych&nbsp;<mat-icon class="Icon">clear</mat-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  
+    <div class="LogOutDiv">
+      <button class="Animation LogOutButton" routerLink="/profile">Wróć&nbsp;<mat-icon class="Icon">keyboard_tab</mat-icon></button>&nbsp;
+    </div>
+  
+  </div>

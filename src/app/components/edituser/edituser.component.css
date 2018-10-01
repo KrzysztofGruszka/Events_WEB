@@ -1,0 +1,160 @@
+.Animation{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:1 em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+  margin-top: 10px;
+}
+.Animation:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.Animation:before,Animation:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.Animation:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.Animation:hover:before,Animation:hover:after{
+  width:100%;
+  transition:2000ms ease all;
+}
+
+.MainTitle {
+color: #1AAB8A;
+margin-left: 50px;
+}
+
+.MainContainer{
+margin-top: 50px;
+background: rgba(0,0,0,.6);
+width: 700px;
+margin-left: 400px;
+}
+
+.MainDiv {
+padding: 40px;
+}
+
+.inputform {
+width: 550px;
+}
+
+.InputText {
+color: #1AAB8A;
+}
+
+.MoveRight {
+margin-left: 232px;
+display: inline-flex;
+}
+
+.MoveRight2{
+margin-left: 20px;
+display: inline-flex;
+}
+
+.FormInputs {
+margin-top: 10px;
+margin-left: 50px;
+}
+
+.divdiamond {
+top: 30px;
+left: 30px;
+position: absolute;
+background: rgba(0,0,0,.6);
+width: 300px;
+height: 600px;
+}
+
+.diamond {
+position: absolute;
+width: 125px;
+height: 125px;
+background: transparent;
+transform: rotate(45deg);
+transition: .1s;
+margin: -65px;
+overflow: hidden;
+opacity: .6;
+}
+
+.bg {
+width: 100%;
+height: 100%;
+transform: rotate(-45deg) scale(1.4);
+}
+
+.diamond1 {
+top: 120px;
+left: 100px;
+}
+
+.diamond1 .bg {
+    background-image: url('../../../Image/Image/impreza2.jpg');
+    background-size: cover;
+}
+
+.diamond2 {
+top: 215px;
+left: 195px;
+}
+
+.diamond2 .bg {
+    background-image: url('../../../Image/Image/meeting.jpg');
+    background-size: cover;
+}
+
+.diamond3 {
+top: 310px;
+left: 100px;
+}
+
+.diamond3 .bg {
+    background-image: url('../../../Image/Image/piknik.jpg');
+    background-size: cover;
+}
+
+.diamond4 {
+top: 405px;
+left: 195px;
+opacity: 0.8;
+}
+
+.diamond4 .bg {
+    background-image: url('../../../Image/Image/koncert-w-polsce.jpg');
+    background-size: cover;
+}
+
+.diamond5 {
+top: 500px;
+left: 100px;
+opacity: 0.8;
+}
+
+.diamond5 .bg {
+    background-image: url('../../../Image/Image/domowka.jpg');
+    background-size: cover;
+}
+
+.hr {
+  border-color: #1AAB8A;
+  margin-left: 50px;
+}

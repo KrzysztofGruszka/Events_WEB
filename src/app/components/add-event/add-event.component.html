@@ -1,0 +1,32 @@
+<form #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="eventService.selectedEvent.$key">
+  <div class="form-group">
+    <label class="label">Nazwa</label>
+    <input class="form-control input" name="EventName" #name="ngModel" [(ngModel)]="eventService.selectedEvent.EventName"
+      placeholder="Full Name" required>
+  </div>
+  <div class="form-group">
+    <label class="label">Lokalizacja</label>
+    <input class="form-control input" name="EventLocation" #position="ngModel" [(ngModel)]="eventService.selectedEvent.EventLocation"
+      placeholder="Location">
+  </div>
+  <div class="form-group">
+    <label class="label">Data</label>
+    <input class="form-control input" name="EventDate" #office="ngModel" [(ngModel)]="eventService.selectedEvent.EventDate"
+      placeholder="Date">
+  </div>
+  <div class="form-group">
+    <label class="label">Opis wydarzenia</label>
+    <input class="form-control input" name="EventDesc" #office="ngModel" [(ngModel)]="eventService.selectedEvent.EventDesc"
+      placeholder="Desc">
+  </div>
+  <div class="form-group">
+    <label class="label">Wymagania wiekowe</label>
+    <input class="form-control input" name="EventReq" #office="ngModel" [(ngModel)]="eventService.selectedEvent.EventReq"
+      placeholder="Req">
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default" type="submit" [disabled]="!eventForm.valid">Submit</button>
+    <button class="btn btn-default" type="button" (click)="resetForm(eventForm)">Reset</button>
+  </div>
+</form>

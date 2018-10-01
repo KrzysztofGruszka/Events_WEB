@@ -1,0 +1,32 @@
+<div>
+  <div class="HelloDiv">
+    <h1 class="HelloWord">Cześć {{ (userItem | async )?.firstName }}!</h1>
+  </div>
+
+  <div class="MenuDiv">
+    <button class="Animation MenuButton" routerLink="/myevents">Moje Wydarzenia<br><mat-icon>location_city</mat-icon></button>
+    <button class="Animation MenuButton MoveDown" routerLink="/myfriends">Moi Znajomi<br><mat-icon>group</mat-icon></button>
+  </div>
+
+  <div class="row">
+    <div class="MainDiv">
+      <h2> Twoje Dane </h2>
+      <hr class="hr">
+      <div class="DataDiv">
+        <label style="color: #1AAB8A">Twój adres E-mail:</label><br>
+        <label class="DataWord">{{ (userItem | async )?.email }}</label><br>
+        <label style="color: #1AAB8A">Twoje imie:</label><br>
+        <label class="DataWord">{{ (userItem | async )?.firstName }}</label><br>
+        <label style="color: #1AAB8A">Twoje nazwisko:</label><br>
+        <label class="DataWord">{{ (userItem | async )?.lastName }}</label><br>
+      </div>
+      <hr class="hr">
+      <button class="Animation EditButton" routerLink="/editUser">Edytuj dane&nbsp;<mat-icon>assignment</mat-icon></button>&nbsp;
+    </div>
+  </div>
+
+  <div class="LogOutDiv">
+    <button class="Animation LogOutButton" routerLink="/home">Wróć&nbsp;<mat-icon>keyboard_tab</mat-icon></button>
+  </div>
+
+</div>

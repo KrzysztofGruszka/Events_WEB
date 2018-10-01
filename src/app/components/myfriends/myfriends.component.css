@@ -1,0 +1,107 @@
+table {
+  width: 100%;
+}
+
+.Animation{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:40px;
+  font-size:1 em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+.Animation:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+.Animation:before,Animation:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+.Animation:after{
+  right:inherit;
+  top:inherit;
+}
+.Animation:hover:before,Animation:hover:after{
+  width:100%;
+  transition:2000ms ease all;
+}
+
+.MatCard {
+  background: rgba(0,0,0,.6);
+  color: #1AAB8A;
+  cursor: default;
+  transform: scale(0.8);
+  width: 1360px;
+}
+
+.LogOutDiv {
+  position: absolute;
+  background: rgba(0,0,0,.6);
+  width: 150px;
+  height: 60px;
+  left: 1250px;
+  top: 600px;
+  text-align: center;
+  transform: scale(0.8);
+}
+
+.LogOutButton {
+  margin-top: 10px;
+  display: inline-flex;
+}
+
+.DetailButtons {
+  display: inline-flex;
+}
+
+.PopUpMessage {
+  text-align: center;
+  font-size: 25px;
+  background: #7aebd1;
+  border: 2px solid #1AAB8A;
+  border-radius: 5px;
+  color: #1AAB8A;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.hr {
+  border-color: #1AAB8A;
+}
+
+.column {
+  width: 220px;
+  font-size: 20px;
+}
+
+.PeopleDiv {
+  margin: 15px;
+  margin-left: 20px;
+  padding: 15px;
+  border: 2px solid #1AAB8A;
+  border-radius: 10px;
+  background: #7aebd1;
+  color: black;
+  width: 620px;
+  height: 140px;
+}
+
+.DataDiv {
+  margin-top:5px;
+}
+
+.ButtonDiv {
+  margin-left: 345px;
+  margin-top: -43px;
+}

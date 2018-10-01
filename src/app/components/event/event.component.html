@@ -1,0 +1,24 @@
+<div>
+    <br>
+    <mat-card class="MatCard">
+      <h1 style="text-align:center">Szczegóły Wydarzenia</h1>
+      <hr class="hr">
+      <div class="PopUpMessage">{{ msg }}</div>
+      <hr class="hr">
+      <tr>Nazwa Wydarzenia</tr>
+      <tr>{{event.EventName}}</tr>
+      <tr>Miejsce</tr>
+      <tr>{{event.EventLocation}}</tr>
+      <tr>Data</tr>
+      <tr>{{event.EventDate}}</tr>
+      <tr>Opis</tr>
+      <tr>{{event.EventDesc}}</tr>
+      <tr>Wymagania</tr>
+      <tr>{{event.EventReq}}</tr>
+    </mat-card>
+  
+    <div class="LogOutDiv">
+      <button class="Animation LogOutButton" routerLink="/events">Wróć&nbsp;<mat-icon class="Icon">keyboard_tab</mat-icon></button>&nbsp;
+    </div>
+  
+  </div>

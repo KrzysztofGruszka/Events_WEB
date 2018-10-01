@@ -1,0 +1,31 @@
+<div>
+  <br>
+  <mat-card class="MatCard">
+    <h1 style="text-align:center">WYDARZENIA</h1>
+    <hr class="hr">
+    <div class="PopUpMessage">{{ msg }}</div>
+    <hr class="hr">
+    <tr>
+        <th class="column">Nazwa</th>
+        <th class="column">Miejsce</th>
+        <th class="column">Data</th>
+        <th class="column">Wymagania</th>
+        <th class="mat-column-right mat-column-font">Akcje</th>
+    </tr>
+    <tr *ngFor="let event of eventList">
+        <td>{{event.EventName}}</td>
+        <td>{{event.EventLocation}}</td>
+        <td>{{event.EventDate}}</td>
+        <td>{{event.EventReq}}</td>
+        <td class="mat-column-right">
+          <button class="Animation DetailButtons" routerLink="/event/{{event.$key}}">Szczegóły&nbsp;<mat-icon>receipt</mat-icon></button>
+          <button class="Animation DetailButtons" (click)="addEventToUser(event.$key,'krzysieko2',event.EventName,event.EventLocation,event.EventDate,event.EventDesc,event.EventReq)">Weź Udział&nbsp;<mat-icon>done</mat-icon></button>
+        </td>
+    </tr>
+  </mat-card>
+
+  <div class="LogOutDiv">
+    <button class="Animation LogOutButton" routerLink="/home">Wróć&nbsp;<mat-icon class="Icon">keyboard_tab</mat-icon></button>&nbsp;
+  </div>
+
+</div>

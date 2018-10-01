@@ -1,0 +1,30 @@
+<div>
+  <br>
+  <mat-card class="MatCard">
+    <h1 style="text-align:center">Moje wydarzenia</h1>
+    <hr class="hr">
+    <div class="PopUpMessage">{{ msg }}</div>
+    <hr class="hr">
+    <th class="column">Nazwa</th>
+    <th class="column">Miejsce</th>
+    <th class="column">Data</th>
+    <th class="column">Wymagania</th>
+    <th class="mat-column-right mat-column-font">Akcje</th>
+    <tr *ngFor="let myevent of myeventList">
+      <td>{{myevent.EventName}}</td>
+      <td>{{myevent.EventLocation}}</td>
+      <td>{{myevent.EventDate}}</td>
+      <td>{{myevent.EventReq}}</td>
+      <td class="mat-column-right">
+        <button class="Animation DetailButtons" (click)="removeMyevent(myevent.$key)">Opuść wydarzenie&nbsp;<mat-icon
+            class="Icon">clear</mat-icon></button>
+        <button class="Animation DetailButtons" routerLink="/event/{{myevent.$key}}">Szczegóły&nbsp;<mat-icon>receipt</mat-icon></button>
+      </td>
+    </tr>
+  </mat-card>
+
+  <div class="LogOutDiv">
+    <button class="Animation LogOutButton" routerLink="/profile">Wróć&nbsp;<mat-icon class="Icon">keyboard_tab</mat-icon></button>&nbsp;
+  </div>
+
+</div>

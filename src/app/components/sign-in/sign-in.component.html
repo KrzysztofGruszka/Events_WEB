@@ -1,0 +1,56 @@
+<div class="divdiamond">
+    <div href="#" class="diamond diamond1">
+        <div class="bg"></div>
+    </div>
+    <div href="#" class="diamond diamond2">
+        <div class="bg"></div>
+    </div>
+    <div href="#" class="diamond diamond3">
+        <div class="bg"></div>
+    </div>
+    <div href="#" class="diamond diamond4">
+        <div class="bg"></div>
+    </div>
+    <div href="#" class="diamond diamond5">
+        <div class="bg"></div>
+    </div>
+</div>
+
+
+<div class="MainContainer">
+  <div class="row">
+    <div class="MainDiv">
+      <h2 class="MainTitle">Zaloguj się</h2>
+      <hr class="hr">
+      <form autocomplete="off" novalidate class="form" [formGroup]="form">
+
+        <div class="FormInputs">
+          <div class="input-group-prepend">
+            <div class="InputText" id="btnGroupAddon">
+              Adres E-mail
+            </div>
+          </div>
+          <input type="text" formControlName="email" class="form-control inputform" placeholder="Wpisz adres E-mail" aria-label="Input group example"
+            aria-describedby="btnGroupAddon">
+        </div>
+
+        <div class="FormInputs">
+          <div class="input-group-prepend">
+            <div class="InputText"  id="btnGroupAddon">
+              Hasło
+            </div>
+          </div>
+          <input type="password" formControlName="password" class="form-control inputform" placeholder="Wpisz hasło" aria-label="Input group example"
+            aria-describedby="btnGroupAddon">
+        </div>
+        <br>
+        <hr class="hr">
+        <div class="FormInputs">
+            <button type="button" class="Animation MoveRight" (click)="onClickSignIn()">Zaloguj&nbsp;<mat-icon class="Icon">input</mat-icon></button>
+            <button type="button" class="Animation MoveRight2" routerLink="/signup">Rejestracja&nbsp;<mat-icon class="Icon">assignment_returned</mat-icon></button>
+        </div>
+      
+      </form>
+    </div>
+  </div>
+</div>

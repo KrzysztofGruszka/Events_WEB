@@ -1,0 +1,40 @@
+<div>
+  <br>
+  <mat-card class="MatCard">
+    <h1 style="text-align:center">Zarejestrowani użytkownicy</h1>
+    <hr class="hr">
+    <div class="PopUpMessage">{{ msg }}</div>
+    <hr class="hr">
+    <div *ngFor="let user of usersList" style="display: inline-block" class="PeopleDiv">
+      <div>
+        <div class="NameDiv">
+          <b style="margin-right: 10px;">Imię i Nazwisko:</b> 
+          {{user.firstName}}
+          {{user.lastName}}
+        </div>
+        <hr class="hr">
+        <div class="DataButtonDiv">
+          <div class="DataDiv">
+            <div>
+              <b style="margin-right: 15px;">Pseudonim:</b>
+              {{user.UserName}}
+            </div>
+            <div>
+              <b style="margin-right: 4px;">Adres E-mail:</b>
+              {{user.email}}
+            </div>
+          </div>
+          <div class="ButtonDiv">
+              <button class="Animation DetailButtons" (click)="addFriend(user.$key, 'krzysieko2', user.UserName, user.firstName, user.lastName, user.email)">Dodaj
+                znajomego&nbsp;<mat-icon class="Icon">person_add</mat-icon></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+
+  <div class="LogOutDiv">
+    <button class="Animation LogOutButton" routerLink="/home">Wróć&nbsp;<mat-icon class="Icon">keyboard_tab</mat-icon></button>&nbsp;
+  </div>
+
+</div>
